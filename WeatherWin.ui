@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>436</width>
+    <height>336</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>436</width>
+    <height>336</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>436</width>
+    <height>336</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>天气快速查询</string>
+  </property>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>421</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>查询城市天气</string>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Agency FB</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>  城市</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="weatherComboBox">
+      <item>
+       <property name="text">
+        <string>北京</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>上海</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>天津</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>重庆</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>郑州</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>长沙</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>乌鲁木齐</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QTextEdit" name="resultText">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="queryBtn">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>280</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>查询</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="clearBtn">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>280</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>清空</string>
+   </property>
+  </widget>
+  <zorder>queryBtn</zorder>
+  <zorder>groupBox</zorder>
+  <zorder>clearBtn</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>queryBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>queryWeather()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>217</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clearBtn</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>clearResult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>310</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>217</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>queryWeather()</slot>
+  <slot>clearResult()</slot>
+ </slots>
+</ui>
