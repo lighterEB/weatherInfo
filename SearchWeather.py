@@ -47,7 +47,7 @@ class MainWindow(QMainWindow):
 
 class WorkThread(QThread):
     trigger = pyqtSignal(str)
-    def __int__(self):
+    def __init__(self):
         super(WorkThread,  self).__init__()
         
         
